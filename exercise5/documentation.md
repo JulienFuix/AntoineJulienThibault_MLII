@@ -3,6 +3,7 @@
 ## Description of dataset
 
 This dataset is a collection of 134 customer reviews from the McDonald's Facebook page in Sri Lanka. The reviews are in English and provide insights into customer experiences and sentiments regarding services and products. The data can be used for sentiment analysis, natural language processing (NLP), and customer feedback trends. It is ideal for beginner-level models in text analysis or to conduct a basic study of customer satisfaction trends in the fast-food industry in Sri Lanka.
+Link of DataSet: https://www.kaggle.com/datasets/kanchana1990/sri-lanka-mcdonalds-fb-reviews-data?resource=download
 
 
 ## General analysis
@@ -26,41 +27,28 @@ This dataset is a collection of 134 customer reviews from the McDonald's Faceboo
 
 **Descriptive statistics:** Since the dataset mostly contains categorical variables, calculating descriptive statistics like mean, median, standard deviation, minimum and maximum wouldn't be applicable here.
 
-**Frequency tables:** You can create frequency tables to analyze the distribution of the data in the categorical columns. For instance, you could create a frequency table to see how many reviews were posted each month or day of the week. This could help identify patterns in customer behavior.
 
+## Application:
 
-## Clustering Methods
-**K-means Clustering:** A partitioning method that aims to divide the data into K clusters.
+# Analyse of the distribution of cluster
+**Observations:** The majority of clusters (50%) have a size of 1, indicating that many data points are isolated and not well-grouped.
+There are a significant number of clusters (40%) with a size of 2, suggesting some degree of clustering but still a lack of strong cluster formation.
+Only 10% of clusters have a size of 3 or 4, indicating that larger, well-populated clusters are relatively rare.
 
-Hierarchical Clustering: A hierarchical method that builds a tree of clusters.
+**Interpretation:** The clustering results suggest that the data may not be well-suited for clustering using the chosen algorithm or parameters. The high proportion of small clusters indicates that many data points are not effectively grouped, and the low proportion of large clusters suggests that the algorithm is struggling to identify distinct and cohesive groups.$
 
-## Distance Metrics
+# Analyse of dimensionality
+**Observations:** The data points are spread out across the plot, suggesting that there is a high degree of variation within the dataset.
+There is some overlap between the clusters, indicating that the clusters are not well-separated.
+There are a few clusters that are more tightly grouped than others, suggesting that these clusters may be more cohesive.
 
-**Euclidean Distance:** The default distance metric used in K-means clustering and hierarchical clustering with the Euclidean linkage.
+**Interpretation:** The clustering results suggest that the data may be well-suited for dimensionality reduction, as the two principal components capture a significant portion of the variance in the data. However, the clustering itself may not be optimal, as there is a significant overlap between the clusters.
 
-**Manhattan Distance:** Used as an alternative metric for K-means clustering.
+# Analyse of Variance
 
-## Heuristics for Choosing Number of Clusters
+**Observations:** The data points are spread out across the plot, suggesting that there is a high degree of variation within the dataset.
+There is some overlap between the clusters, indicating that the clusters are not well-separated.
+There are a few clusters that are more tightly grouped than others, suggesting that these clusters may be more cohesive.
+Interpretation:
 
-**Elbow Method:** Determines the optimal number of clusters by identifying the "elbow point" in the distortion plot.
-
-**Silhouette Score:** Evaluates the quality of clustering by measuring the compactness and separation of clusters.
-
-## Workflow
-
-**Data Loading:** Load the customer data from the provided file and standardize it.
-
-**Clustering Methods and Metrics Definition:** Define the clustering methods, including K-means and hierarchical clustering, along with their associated distance metrics.
-
-**Elbow Method:** Determine the optimal number of clusters for each method using the Elbow method and plot the distortion curves.
-
-**Silhouette Score:** Evaluate the silhouette scores for different numbers of clusters and select the one with the highest score.
-
-**Clustering:**** Perform clustering using the selected number of clusters and store the results.
-
-**Visualization:** Plot the clustering results for each method, visualizing the clusters in a 2D space.
-
-## Conclusion
-
-The script enables the comparison of different clustering methods and heuristics for determining the optimal number of clusters. By examining the clustering results and considering the insights provided by each method, the company can make informed decisions about segmenting its customers and tailoring products or services accordingly.
-
+**Interpretation:** The clustering results suggest that the data may be well-suited for dimensionality reduction, as the two principal components capture a significant portion of the variance in the data. However, the clustering itself may not be optimal, as there is a significant overlap between the clusters.
