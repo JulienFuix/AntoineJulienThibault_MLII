@@ -34,12 +34,16 @@ plt.show()
 svd = TruncatedSVD(n_components=2, random_state=42)
 X_svd = svd.fit_transform(X)
 
+# Rename the dimensions
+data['semantic_feature_1'] = X_svd[:, 0]
+data['semantic_feature_2'] = X_svd[:, 1]
+
 # Visualize the reduced data with cluster labels
 plt.figure(figsize=(10, 6))
-sns.scatterplot(x=X_svd[:, 0], y=X_svd[:, 1], hue=data['cluster'], palette='viridis', legend='full')
-plt.title('Dimensionality Reduction with Cluster Labels')
-plt.xlabel('Component 1')
-plt.ylabel('Component 2')
+sns.scatterplot(x='semantic_feature_1', y='semantic_feature_2', hue='cluster', data=data, palette='viridis', legend='full')
+plt.title('Semantic Feature Representation with Cluster Labels')
+plt.xlabel('Semantic Feature 1')
+plt.ylabel('Semantic Feature 2')
 plt.show()
 
 # Calculate explained variance ratio
